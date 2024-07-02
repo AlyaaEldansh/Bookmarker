@@ -1,0 +1,107 @@
+* , *::after , *::before
+{
+    box-sizing: border-box;
+}
+body
+{
+    background-color: #f7ecde;
+}
+main h1
+{
+    font-size: 50px;
+    font-family: Pacifico, cursive;
+}
+main h1::before
+{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 18%;
+    background-color: #ffc107;
+    height: 25%;
+    z-index: -1;
+    transition: height 0.50s;
+}
+main h1:hover::before
+{
+    height: 70%;
+}
+main h3
+{
+    font-family: Righteous, cursive;
+    font-size: 25px;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    background-clip: text;
+    color: transparent;
+
+}
+label.form-labal
+{
+    color: #212529;
+}
+input.form-control.shadow-color:focus
+{
+    box-shadow: 0 0 0 0.25rem #fec26055 !important;
+    border-color: #d99c39;
+}
+.correct-sign , .wrong-sign
+{
+    position: absolute;
+    top: 61%;
+    right: 1%;
+}
+.check-sign , .exclamation-sign
+{
+    position: absolute;
+    top: 63%;
+    right: 1%;
+}
+.btn-color
+{
+    color: white;
+    background-color: #d1512d;
+}
+.btn-color:hover
+{
+    color: white;
+    background-color: #bb4120;
+}
+.button-color
+{
+    color: white;
+    background-color: #9eb23b;
+}
+.button-color:hover
+{
+    color: white;
+    background-color: #8a9e23;
+}
+.buttonColor
+{
+    color: white;
+    background-color: #eb1d36;
+}
+.buttonColor:hover
+{
+    color: white;
+    background-color: #d30820;
+}
+.btn-Update
+{
+    color: white;
+    background-color: #ffc107;
+}
+.btn-Update:hover
+{
+    color: white;
+    background-color: #f4be1d;
+}
+
+@media (max-width:765px) {
+
+    main h1::before
+    {
+        width: 40% !important;
+    }
+    
+}

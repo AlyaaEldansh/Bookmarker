@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link href="css/all.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <h1 class="text-center my-5 position-relative">Bookmarker</h1>
+        <hr class="w-75 m-auto">
+        <h3 class="text-center my-4"><i class="fa-solid fa-bookmark pe-2"></i>Bookmark your favorite sites<i class="fa-solid fa-bookmark ps-2"></i></h3>
+        <div class="mb-3 w-75 m-auto position-relative">
+            <label for="siteName" class="form-label fw-semibold"><i class="fa-solid fa-book-bookmark pe-2"></i>Site Name</i></label>
+            <input type="text" class="form-control shadow-color " oninput="siteValid(this)" id="siteName" placeholder="Bookmark Name">
+            <i id = "sitecorrect" class="fa-solid fa-check text-success correct-sign d-none" oninput="siteValid(this)"></i>
+            <i id = "sitewrong" class="fa-solid fa-circle-exclamation text-danger wrong-sign d-none" oninput="siteValid(this)"></i>
+          </div>
+          <div class="mb-3 w-75 m-auto position-relative">
+            <label for="siteUrl" class="form-label fw-semibold"><i class="fa-solid fa-link pe-2"></i>Site URL</label>
+            <input  type="text" class="form-control shadow-color " oninput="urlValid(this)" id="siteUrl" placeholder="Website URL">
+            <i id = "urlcorrect" class="fa-solid fa-check text-success check-sign d-none " oninput="urlValid(this)"></i>
+            <i id = "urlwrong" class="fa-solid fa-circle-exclamation text-danger exclamation-sign d-none" oninput="urlValid(this)"></i>
+          </div>
+          <button id="btn-submit" onclick="submitSite()" class="text-center btn-color py-2 px-5 border-0 rounded-2 d-block m-auto my-4">Submit</button>
+          <button id="btn-update" onclick="updateSite()" class="text-center btn-Update py-2 px-5 border-0 rounded-2 d-none m-auto my-4">Update</button>
+          <hr class="w-75 m-auto">
+
+          <table class="w-75 mx-auto text-center bg-white my-3 ">
+            <thead>
+                <th class="py-2">Index</th>
+                <th class="py-2">Website Name</th>
+                <th class="py-2">Visit</th>
+                <th class="py-2">Delete</th>
+                <th class="py-2">Update</th>
+            </thead>
+            <tbody id="tableData">
+
+            </tbody>
+          </table>
+          
+    </main>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
